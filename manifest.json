@@ -1,0 +1,27 @@
+{
+"name" :"BFFdownloader",
+"manifest_version" :2,
+"version" :"0.5",
+"icons" : 
+{
+  "128" : "icone.png"
+},
+"description" :"Add a download button to BFF playlists",
+"permissions": 
+[
+  "*://bff.fm/*", 
+  "tabs", 
+  "webNavigation"
+],
+"background" :
+{
+  "scripts" : ["background.js"]
+},
+"content_scripts" :
+  [
+    {
+      "matches" : ["*://bff.fm/*"],
+      "js" : ["add_download_button.js"]
+    }
+  ]
+}
